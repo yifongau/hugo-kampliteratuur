@@ -21,7 +21,9 @@ markup:
       unsafe: true 
 
 #theme: 'mytheme'
-
+caches:
+  images:
+    dir: :cacheDir/images
 
 frontmatter:
 # Leidt datum af van bestandsnaam (YYYY-MM-DD-titel-publicatie)
