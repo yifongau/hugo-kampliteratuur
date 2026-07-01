@@ -1,0 +1,48 @@
+# In dit bestand worden globale variabelen
+# voor het functioneren van de website bepaald
+
+baseURL: 'https://kampliteratuur.nl'
+languageCode: 'nl-nl'
+title: 'KAMPLITERATUUR.nl'
+
+# uglyUrLs bepaalt of een pagina wordt gegenereerd 
+# als <publicaties/titel.txt> 
+# of <publicatie/titel/index.index>
+uglyURLs: false
+
+# We behouden het hoofdlettergebruik zoals we het invoeren
+capitalizeListTitles: false
+pluralizeListTitles: false
+
+markup:
+  goldmark:
+# unsafe rendering is nodig voor het renderenvan html in .md-bestanden
+    renderer:
+      unsafe: true 
+
+#theme: 'mytheme'
+
+
+frontmatter:
+# Leidt datum af van bestandsnaam (YYYY-MM-DD-titel-publicatie)
+  date: 
+  - :filename
+  - :default
+
+# Definieer de categoriëen die we gebruiken.
+# Deze kunnen vervolgens als metadata ingevoerd worden
+# bij een publicatie.
+
+taxonomies:
+  foto: foto-archief
+  publicatie: publicaties
+  nieuws: nieuws
+  bibliografie-item: bibliografie
+
+outputs:
+  home:
+  - html
+  section:
+  page:
+  taxonomy:
+  term:
